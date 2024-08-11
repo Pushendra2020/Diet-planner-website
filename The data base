@@ -1,0 +1,161 @@
+-- Create 'us' table
+CREATE TABLE us (
+   user_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(255) NOT NULL,
+    user_email VARCHAR(255) NOT NULL,
+    user_pass VARCHAR(255) NOT NULL
+);
+
+-- Create 'them' table with a foreign key referencing 'us'
+CREATE TABLE them (
+    user_info_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    gender VARCHAR(50),
+    goal VARCHAR(50),
+    body_type VARCHAR(50),
+    food_type VARCHAR(50),
+    age INT,
+    height INT,
+    weight INT,
+    FOREIGN KEY (user_id) REFERENCES us(user_id) ON DELETE CASCADE
+);
+
+
+
+drop table us;
+drop table them;
+-- create table them (
+-- form_id int not null primary key auto_increment,
+-- user_weight int,
+-- user_height int,
+-- user_age int,
+-- user_gender varchar(225),
+-- user_goal varchar(225),
+-- user_bodyType varchar(225),
+-- user_foodType varchar(225)
+-- );
+
+CREATE TABLE foods (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into foods (name_food,calories,protein,carbs,fats)values('Vada pav',100,2.6,80,4.9);
+insert into foods (name_food,calories,protein,carbs,fats)values('Pav Bhaji',160,5.6,150,7.9);
+insert into foods (name_food,calories,protein,carbs,fats)values('Fish Curi',500,8.6,110,2.9);
+
+create table planbreak1(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+drop table plandinner1;
+insert into planbreak1 (name_food,calories,protein,carbs,fats)values('Banana',110 ,1,28,0);
+insert into planbreak1 (name_food,calories,protein,carbs,fats)values('Full glass of milk',149,8 ,12 ,8 );
+
+
+create table planlunch1(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into planlunch1 (name_food,calories,protein,carbs,fats)values('Roti with Dal',106,3.8 ,22.3 ,0.5 );
+insert into planlunch1 (name_food,calories,protein,carbs,fats)values('Salad',64 ,1.39,7.29,3.3);
+
+
+create table plandinner2(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into plandinner2 (name_food,calories,protein,carbs,fats)values('Paneer Bhurji',370 ,10.4  ,10.9  ,31.7 );
+insert into plandinner2 (name_food,calories,protein,carbs,fats)values('Vegetable Curry',202,3.8,21,13);
+
+
+-- 2
+
+create table planbreak2(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+drop table plandinner2;
+insert into planbreak2 (name_food,calories,protein,carbs,fats)values('Paratha',200  ,5,36,4.6);
+insert into planbreak2 (name_food,calories,protein,carbs,fats)values('Omelette',240 ,14  ,4.6  ,11.7 );
+
+
+create table planlunch2(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into planlunch2 (name_food,calories,protein,carbs,fats)values('	
+Chicken Curry with Rice',263,26 ,17 ,9.7 );
+insert into planlunch2 (name_food,calories,protein,carbs,fats)values('Salad',64 ,1.39,7.29,3.3);
+
+create table plandinner2(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into plandinner2 (name_food,calories,protein,carbs,fats)values('Fish Curry',221,12 ,16,13);
+insert into plandinner2 (name_food,calories,protein,carbs,fats)values('Roti',106,3.8 ,22.3 ,0.5);
+
+-- 3
+
+create table planbreak3(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+drop table plandinner3;
+insert into planbreak3 (name_food,calories,protein,carbs,fats)values('Idli Sambar',169,12,61,18);
+
+
+
+create table planlunch3(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into planlunch3 (name_food,calories,protein,carbs,fats)values('	
+Palak Paneer',83.86 ,4.78  ,4.01  ,5.24 );
+insert into planlunch3 (name_food,calories,protein,carbs,fats)values('Salad',64 ,1.39,7.29,3.3);
+
+create table plandinner3(
+id int auto_increment primary key,
+ name_food VARCHAR(255) NOT NULL,
+    calories INT,
+    protein FLOAT,
+    carbs FLOAT,
+    fats FLOAT
+);
+insert into plandinner3 (name_food,calories,protein,carbs,fats)values('Vegetable Soup',55.66,2.02 ,12.14,0.76);
+insert into plandinner3 (name_food,calories,protein,carbs,fats)values('Khichdi',200,10 ,37,1);
