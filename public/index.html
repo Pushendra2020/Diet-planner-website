@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Planner</title>
+
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+
+<body>
+
+  <section>
+    <header class="header">
+      <a href="#" class="logo">DIET PLANNER</a>
+      <nav class="navbar">
+        <a href="#calculator">Calculator</a>
+        <a href="#help">Help</a>
+        <button class="button" type="button" id="bb"><a href="assets/login.html" id="but">Get Started</a></button>
+      </nav>
+
+
+    </header>
+
+
+    <div class="hero">
+
+      <h1 id="hero_head"> <span style="color:#98e54c;">Your</span> Personal <br>
+        <span style="color:#98e54c;">Diet</span> Planner
+      </h1>
+      <p class="hero_p">Calorie and Macro Meal Planner. Serve up recipes for your personalized meal plan
+        automatically. Calculate
+        your nutritional needs and generate custom diet plans for weight loss, bodybuilding and much more!</p>
+
+      <button class="button" type="button" id="b"> <a href="assets/login.html" id="but">GET STARTED FOR FREE...</a></button>
+    </div>
+    <div class="search">
+      <input type="text" id="searchInput" class="s_bar" placeholder="Search For Food" >
+      <button id="searchButton" class="s_bnt"><i class="fa-solid fa-magnifying-glass"
+          style="padding-left: 30px; font-size: 20px;"></i></button>
+
+      <div>
+        <table id="foodTable">
+          <thead class="temp_hide table_st">
+            <tr>
+              <th>ID</th>
+              <th>Food Name</th>
+              <th>Calories</th>
+              <th>Protein (g)</th>
+              <th>Carbs (g)</th>
+              <th>Fats (g)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Don't Tuch this part  -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="low_back">
+    <div class="bmi">
+      <span style="color:white; font-weight:500">Weight: <input type="number" placeholder="(Kg)" id="we"></span>
+      <span style="color:white; font-weight:500">Height: <input type="number" placeholder="(m)" id="he"></span>
+      <span style="color:white; font-weight:500">Age: <input type="number" placeholder="(Yr)" id="Age"></span>
+      <select name="" id="gender">
+        <option value="" id="male">Male</option>
+        <option value="" id="female">Female</option>
+      </select>
+
+      <button id="sum">SUBMIT</button>
+      <p class="ans1 hide">Nothing</p>
+      <p class="ans2 hide">no one</p>
+    </div>
+
+    <div class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <details class="st">
+        <summary>How does the meal planner work?</summary>
+        <p>Each diet plan selected can be customised according to things such as your personal statistics,
+          current
+          physical condition, activity levels and whether you want to lose fat, stay in shape, or gain muscle.
+          It
+          can be personalised to whether you are a vegan or not, if you have any allergies such as gluten,
+          also
+          including the option for halal and kosher recipes only. You can even tell the planner that you
+          prefer to
+          only drink smoothies in the morning. Once your diet plan is set up, the meal planner automatically
+          finds
+          recipes to match the diet plan criteria. Have a look at the suggested recipes that are produced for
+          you
+          automatically and adjust until you get what is right for you.</p>
+      </details>
+      <details class="st">
+        <summary> Will I need to update my diet meal plan often? </summary>
+        <p>This depends mainly on how fast your weight loss is. If you notice that your weight loss has started
+          to
+          stall you made need to set up a new plan with a lower calorie requirement (or increase your daily
+          activity instead and stick with the same plan).</p>
+
+      </details>
+
+
+    </div>
+  </section>
+  <script src="public/script.js"></script>
+</body>
+
+</html>
+
+
+
