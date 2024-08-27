@@ -75,7 +75,7 @@ app.get('/', (req, res) => {
 // Function to authenticate user
 function authenticateUser(username, password, callback) {
     const sql = `
-        SELECT u.user_id, u.user_email, ui.gender, ui.goal, ui.body_type, ui.food_type, ui.age, ui.height, ui.weight
+        SELECT u.user_id, u.user_name, u.user_email, ui.gender, ui.goal, ui.body_type, ui.food_type, ui.age, ui.height, ui.weight
         FROM us u
         JOIN them ui ON u.user_id = ui.user_id
         WHERE u.user_email = ? AND u.user_pass = ?
@@ -98,7 +98,7 @@ app.post('/', (req, res) => {
     const username =req.body.username;
     const password = req.body.password;
 
-    authenticateUser(username, password, (err, userInfo) => {
+    authenticateUser(username, password,(err, userInfo) => {
         if (err) {
             console.error('Error executing query:', err);
             return res.status(500).json({ error: 'Database error' });
@@ -117,7 +117,7 @@ app.post('/', (req, res) => {
             foodType: userInfo.food_type,
             age: userInfo.age,
             height: userInfo.height,
-            weight: userInfo.weight
+            weight: userInfo.weight,
         });
     });
 });
@@ -143,10 +143,10 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    const { name,username, password, gender, goal, bodyType, foodType, age, height, weight } = req.body;
+    const { namee,username, password, gender, goal, bodyType, foodType, age, height, weight } = req.body;
 
     const sql = 'INSERT INTO us (user_name, user_email, user_pass) VALUES (?, ?, ?)';
-    const values = [name,username, password]; // Assuming user_email is derived from username
+    const values = [namee,username, password]; // Assuming user_email is derived from username
 
     connection.query(sql, values, (error, results) => {
         if (error) {
@@ -195,10 +195,9 @@ app.post('/re', (req, res) => {
             return;
         }
 
-        res.redirect('assets/dash.html');
+        res.redirect('dash.html');
     });
 });
-
 
 
 
@@ -303,6 +302,192 @@ app.get('/plandinner3', (req, res) => {
         res.json(results);
     });
 });
+
+// 4
+
+app.get('/planbreak4', (req, res) => {
+    let sql = 'SELECT * FROM planbreak4';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch4', (req, res) => {
+    let sql = 'SELECT * FROM planlunch4';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner4', (req, res) => {
+    let sql = 'SELECT * FROM plandinner4';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// 5
+
+app.get('/planbreak5', (req, res) => {
+    let sql = 'SELECT * FROM planbreak5';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch5', (req, res) => {
+    let sql = 'SELECT * FROM planlunch5';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner5', (req, res) => {
+    let sql = 'SELECT * FROM plandinner5';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+ 
+
+// 6
+
+app.get('/planbreak6', (req, res) => {
+    let sql = 'SELECT * FROM planbreak6';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch6', (req, res) => {
+    let sql = 'SELECT * FROM planlunch6';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner6', (req, res) => {
+    let sql = 'SELECT * FROM plandinner6';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// 7
+
+app.get('/planbreak7', (req, res) => {
+    let sql = 'SELECT * FROM planbreak7';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch7', (req, res) => {
+    let sql = 'SELECT * FROM planlunch7';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner7', (req, res) => {
+    let sql = 'SELECT * FROM plandinner7';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// 8
+
+app.get('/planbreak8', (req, res) => {
+    let sql = 'SELECT * FROM planbreak8';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch8', (req, res) => {
+    let sql = 'SELECT * FROM planlunch8';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner8', (req, res) => {
+    let sql = 'SELECT * FROM plandinner8';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// 9
+
+app.get('/planbreak9', (req, res) => {
+    let sql = 'SELECT * FROM planbreak6';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch9', (req, res) => {
+    let sql = 'SELECT * FROM planlunch9';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner9', (req, res) => {
+    let sql = 'SELECT * FROM plandinner9';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+// 10
+
+app.get('/planbreak10', (req, res) => {
+    let sql = 'SELECT * FROM planbreak10';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/planlunch10', (req, res) => {
+    let sql = 'SELECT * FROM planlunch10';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+app.get('/plandinner10', (req, res) => {
+    let sql = 'SELECT * FROM plandinner10';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        res.json(results);
+    });
+});
+
+
+
 
 app.get('/', (req, res) => {
     const userEmail = req.query.username; // Assuming you're identifying the user by email
