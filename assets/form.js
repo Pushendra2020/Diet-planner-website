@@ -303,12 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let age = document.getElementById('age').value;
         let height = document.getElementById('height').value;
         let weight = document.getElementById('weight').value;
-        // let username = document.getElementById('username').value;
-        // let password = document.getElementById('password').value;
-
-        // localStorage.setItem('user_id',user_id);
-
-
 
         if (!gender || !goal || !bodyType || !foodType) {
             alert('Please make sure to select an option for Gender, Goal, Body Type, and Food Type.');
