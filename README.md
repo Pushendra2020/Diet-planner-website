@@ -57,3 +57,9 @@ This is our first project so their will be some minor issues.
 ![gitss10](https://github.com/user-attachments/assets/5f7543ab-993a-4b3f-973a-0bd16e236004)
 
 
+# This is the team project
+Team member and their role
+1. Pushendra2020
+2. Role: Back-end and adding functionality.
+3. Soham
+4. Role: Front-end and designing the website.
