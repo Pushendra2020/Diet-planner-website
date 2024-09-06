@@ -16,15 +16,16 @@ copy and paste in the MYSQL workbench
 # Step 2
 
 1. Clone the project and open the terminal and install the following packages:-
-    1.npm install node.js
+2.  1.npm install node.js
     3.npm install mysql2
     4.npm install express
     5.npm install body-parser
     6.npm install path
     7.npm install nodmon
-2. open package.json file copy paste this :-
+   
+3. open package.json file copy paste this :-
  ![gitss1](https://github.com/user-attachments/assets/b5f437ac-33d9-4ad5-91ab-e4060400875b)
-3. Now run "npm start" on terminal to run the program.
+4. Now run "npm start" on terminal to run the program.
    
 # Step 3
 
